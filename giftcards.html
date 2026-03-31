@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards - The Ember Lounge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">The Ember Lounge</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">View Menu</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="takeout.html">Takeout</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="wine.html">Wine List</a></li>
+            <li><a href="giftcards.html">Gift Cards</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="page-title">GIFT CARDS</h1>
+    
+    <div class="giftcard-hero">
+        <!-- LEFT SIDE - Enhanced Visual Preview -->
+        <div class="giftcard-left">
+            <!-- Main Gift Card Visual -->
+            <div class="giftcard-visual">
+                <div class="giftcard-card" id="giftCardPreview">
+                    <div class="card-design">
+                        <div class="card-header">
+                            <span class="card-logo">🔥 The Ember Lounge</span>
+                            <span class="card-chip">💳</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="card-amount" id="cardAmountDisplay">$100</span>
+                            <span class="card-label">GIFT CARD</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-number">**** **** **** 4242</span>
+                            <span class="card-valid">VALID THRU 12/28</span>
+                        </div>
+                    </div>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+
+            <!-- Additional Info Cards -->
+            <div class="info-cards">
+                <div class="info-card">
+                    <span class="info-icon">🎁</span>
+                    <div class="info-content">
+                        <h4>Instant Delivery</h4>
+                        <p>E-gift cards sent immediately via email</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <span class="info-icon">📅</span>
+                    <div class="info-content">
+                        <h4>Never Expires</h4>
+                        <p>Use anytime, no expiration date</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <span class="info-icon">🍽️</span>
+                    <div class="info-content">
+                        <h4>Any Experience</h4>
+                        <p>Valid for dine-in, takeout & delivery</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial -->
+            <div class="giftcard-testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"The perfect gift for food lovers! My parents had an amazing anniversary dinner."</p>
+                <span class="testimonial-author">— Sarah M.</span>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE - Form (Keep as is) -->
+        <div class="giftcard-info">
+            <h2>The Perfect Gift</h2>
+            <p>Share the warmth of exceptional dining with someone special. Our gift cards never expire and can be used for dine-in, takeout, or delivery.</p>
+            
+            <div class="giftcard-options">
+                <h3>Select Amount</h3>
+                <div class="amount-buttons">
+                    <button class="amount-btn" onclick="selectAmount(25)">$25</button>
+                    <button class="amount-btn" onclick="selectAmount(50)">$50</button>
+                    <button class="amount-btn active" onclick="selectAmount(100)">$100</button>
+                    <button class="amount-btn" onclick="selectAmount(200)">$200</button>
+                </div>
+                
+                <div class="custom-amount">
+                    <label>Or enter custom amount ($25 - $1000):</label>
+                    <input type="number" id="customAmount" placeholder="Enter amount" min="25" max="1000">
+                </div>
+
+                <h3>Delivery Method</h3>
+                <div class="delivery-method">
+                    <label class="radio-label">
+                        <input type="radio" name="deliveryMethod" value="email" checked>
+                        <span class="radio-custom"></span>
+                        <div class="radio-text">
+                            <strong>Email (Instant)</strong>
+                            <small>Delivered immediately to inbox</small>
+                        </div>
+                    </label>
+                    
+                    <label class="radio-label">
+                        <input type="radio" name="deliveryMethod" value="physical">
+                        <span class="radio-custom"></span>
+                        <div class="radio-text">
+                            <strong>Physical Card (Mail)</strong>
+                            <small>Ships within 2-3 business days</small>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="recipient-info">
+                    <h3>Recipient Details</h3>
+                    <input type="text" placeholder="Recipient Name *" id="recipientName" required>
+                    <input type="email" placeholder="Recipient Email *" id="recipientEmail" required>
+                    <textarea placeholder="Add a personal message... (Optional)" rows="3" id="giftMessage"></textarea>
+                </div>
+                
+                <button class="btn-purchase" onclick="purchaseGiftCard()">PURCHASE GIFT CARD — $<span id="purchaseAmount">100</span></button>
+                <p class="giftcard-note">Physical cards available for pickup. E-gift cards delivered instantly.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>The Ember Lounge</h4>
+                <p>Sophisticated dining with warmth and authenticity. Where every meal becomes a memory.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Dine</h5>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="wine.html">Wine List</a></li>
+                    <li><a href="reservation.html">Reservations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Order</h5>
+                <ul>
+                    <li><a href="takeout.html">Takeout</a></li>
+                    <li><a href="delivery.html">Delivery</a></li>
+                    <li><a href="giftcards.html">Gift Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="mailto:info@emberlounge.com">info@emberlounge.com</a></li>
+                    <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Ember Lounge • All Rights Reserved</p>
+        </div>
+    </footer>
+
+<script src="res.js"></script>
+</body>
+</html>

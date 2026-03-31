@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - The Ember Lounge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">The Ember Lounge</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">View Menu</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="takeout.html">Takeout</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="wine.html">Wine List</a></li>
+            <li><a href="giftcards.html">Gift Cards</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="page-title">MAKE A RESERVATION</h1>
+    
+    <div class="reservation-container">
+        <form class="reservation-form" id="reservationForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <select id="time" name="time" required>
+                        <option value="">Select Time</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="17:30">5:30 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                        <option value="18:30">6:30 PM</option>
+                        <option value="19:00">7:00 PM</option>
+                        <option value="19:30">7:30 PM</option>
+                        <option value="20:00">8:00 PM</option>
+                        <option value="20:30">8:30 PM</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <select id="guests" name="guests" required>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6">6 Guests</option>
+                    <option value="7+">7+ Guests (Please call)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="occasion">Special Occasion (Optional)</label>
+                <select id="occasion" name="occasion">
+                    <option value="">None</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="business">Business Dinner</option>
+                    <option value="date">Date Night</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="requests">Special Requests</label>
+                <textarea id="requests" name="requests" rows="3" placeholder="Any dietary restrictions or seating preferences?"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-reserve">CONFIRM RESERVATION</button>
+        </form>
+    </div>
+</main>
+
+<!-- Confirmation Modal -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-icon">✓</div>
+        <h2>Reservation Confirmed!</h2>
+        <p>Thank you for choosing The Ember Lounge.</p>
+        <p id="confirmationDetails"></p>
+        <button class="btn-close" onclick="closeModal()">CLOSE</button>
+    </div>
+</div>
+
+<footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>The Ember Lounge</h4>
+                <p>Sophisticated dining with warmth and authenticity. Where every meal becomes a memory.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Dine</h5>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="wine.html">Wine List</a></li>
+                    <li><a href="reservation.html">Reservations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Order</h5>
+                <ul>
+                    <li><a href="takeout.html">Takeout</a></li>
+                    <li><a href="delivery.html">Delivery</a></li>
+                    <li><a href="giftcards.html">Gift Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="mailto:info@emberlounge.com">info@emberlounge.com</a></li>
+                    <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Ember Lounge • All Rights Reserved</p>
+        </div>
+    </footer>
+
+<script src="res.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | The Ember Lounge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">The Ember Lounge</div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="takeout.html">Takeout</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="wine.html">Wine</a></li>
+            <li><a href="giftcards.html">Gift Cards</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <div class="menu-intro">
+        <h1 class="page-title">Our Menu</h1>
+        <p class="page-subtitle">Seasonal ingredients, crafted with care</p>
+    </div>
+
+    <div class="menu-grid">
+        <!-- Starters -->
+        <section class="menu-section">
+            <h2 class="menu-category">Starters</h2>
+            
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Garlic Butter Shrimp</h3>
+                    <p>Grilled prawns tossed in garlic, herbs, and white wine butter sauce</p>
+                    <span class="dietary">GF</span>
+                </div>
+                <span class="price">$16</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Veggie Spring Rolls</h3>
+                    <p>Crispy rolls with cabbage, carrots, and glass noodles, sweet chili dip</p>
+                    <span class="dietary">V</span>
+                </div>
+                <span class="price">$12</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Ember Wings</h3>
+                    <p>House-smoked, chipotle glaze, blue cheese crumble</p>
+                </div>
+                <span class="price">$14</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Burrata & Heirloom</h3>
+                    <p>Fresh burrata, heirloom tomatoes, basil oil, balsamic reduction</p>
+                    <span class="dietary">V · GF</span>
+                </div>
+                <span class="price">$18</span>
+            </div>
+        </section>
+
+        <!-- Mains -->
+        <section class="menu-section">
+            <h2 class="menu-category">Mains</h2>
+            
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Ember Burger</h3>
+                    <p>Prime beef, caramelized onion jam, gruyère, truffle aioli, brioche</p>
+                </div>
+                <span class="price">$24</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Pan-Seared Salmon</h3>
+                    <p>Miso glaze, bok choy, ginger rice, sesame crisp</p>
+                    <span class="dietary">GF</span>
+                </div>
+                <span class="price">$32</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Wild Mushroom Risotto</h3>
+                    <p>Arborio rice, porcini, truffle oil, parmesan crisp</p>
+                    <span class="dietary">V · GF</span>
+                </div>
+                <span class="price">$26</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Lamb Osso Buco</h3>
+                    <p>Braised lamb shank, polenta, gremolata, red wine reduction</p>
+                    <span class="dietary">GF</span>
+                </div>
+                <span class="price">$38</span>
+            </div>
+        </section>
+
+        <!-- Desserts -->
+        <section class="menu-section">
+            <h2 class="menu-category">Desserts</h2>
+            
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>Warm center, vanilla bean ice cream, raspberry coulis</p>
+                    <span class="dietary">V</span>
+                </div>
+                <span class="price">$12</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Crème Brûlée</h3>
+                    <p>Madagascar vanilla, caramelized sugar, fresh berries</p>
+                    <span class="dietary">GF</span>
+                </div>
+                <span class="price">$10</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <h3>Seasonal Fruit Tart</h3>
+                    <p>Vanilla custard, fresh market fruits, honey glaze</p>
+                    <span class="dietary">V</span>
+                </div>
+                <span class="price">$11</span>
+            </div>
+        </section>
+    </div>
+
+    <div class="text-center mt-40">
+        <p style="font-size: 12px; color: var(--text-light); margin-bottom: 20px;">
+            <strong>V</strong> = Vegetarian &nbsp;|&nbsp; <strong>GF</strong> = Gluten-Free &nbsp;|&nbsp; 
+            Please inform your server of any allergies
+        </p>
+        <a href="reservation.html" class="btn btn-primary">Make a Reservation</a>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h4>The Ember Lounge</h4>
+            <p>Sophisticated dining with warmth and authenticity.</p>
+        </div>
+        <div class="footer-links">
+            <h5>Dine</h5>
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="wine.html">Wine List</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h5>Order</h5>
+            <ul>
+                <li><a href="takeout.html">Takeout</a></li>
+                <li><a href="delivery.html">Delivery</a></li>
+                <li><a href="giftcards.html">Gift Cards</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h5>Contact</h5>
+            <ul>
+                <li><a href="mailto:info@emberlounge.com">info@emberlounge.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 The Ember Lounge • All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="res.js"></script>
+</body>
+</html>

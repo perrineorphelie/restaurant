@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery - The Ember Lounge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">The Ember Lounge</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">View Menu</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="takeout.html">Takeout</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="wine.html">Wine List</a></li>
+            <li><a href="giftcards.html">Gift Cards</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="page-title">DELIVERY</h1>
+    
+    <div class="delivery-hero">
+        <p class="delivery-tagline">Premium dining delivered to your door</p>
+        <div class="delivery-badges">
+            <span class="badge">🚚 Free Delivery over $50</span>
+            <span class="badge">⏱️ 45-60 min</span>
+            <span class="badge">📍 5 mile radius</span>
+        </div>
+    </div>
+
+    <div class="delivery-grid">
+        <div class="delivery-info">
+            <h2>Delivery Partners</h2>
+            <p>Order through our trusted partners for the best experience:</p>
+            
+            <div class="partner-buttons">
+                <a href="#" class="btn-partner doordash">
+                    <span class="partner-icon">🚪</span>
+                    <div class="partner-text">
+                        <strong>Order on DoorDash</strong>
+                        <small>Fastest delivery</small>
+                    </div>
+                </a>
+                
+                <a href="#" class="btn-partner ubereats">
+                    <span class="partner-icon">🚗</span>
+                    <div class="partner-text">
+                        <strong>Order on UberEats</strong>
+                        <small>Real-time tracking</small>
+                    </div>
+                </a>
+                
+                <a href="#" class="btn-partner direct">
+                    <span class="partner-icon">📞</span>
+                    <div class="partner-text">
+                        <strong>Call Direct</strong>
+                        <small>(555) 123-4567</small>
+                    </div>
+                </a>
+            </div>
+
+            <div class="delivery-hours">
+                <h3>Delivery Hours</h3>
+                <ul>
+                    <li><span>Thu - Sun</span><span>5:00 PM - 9:00 PM</span></li>
+                    <li><span>Fri - Sat</span><span>5:00 PM - 9:30 PM</span></li>
+                </ul>
+            </div>
+
+            <div class="delivery-notes">
+                <h3>Delivery Notes</h3>
+                <ul class="notes-list">
+                    <li>✓ Minimum order $20</li>
+                    <li>✓ Free delivery on orders over $50</li>
+                    <li>✓ 5-mile delivery radius from restaurant</li>
+                    <li>✓ All packaging is eco-friendly & compostable</li>
+                    <li>✓ Hot items kept warm with insulated bags</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="delivery-map-section">
+            <h2>Delivery Zone</h2>
+            <div id="deliveryMap" class="delivery-map"></div>
+            <div class="map-legend">
+                <span class="legend-item"><span class="dot red"></span> Restaurant</span>
+                <span class="legend-item"><span class="dot blue"></span> Delivery Zone</span>
+            </div>
+            <div class="address-box">
+                <strong>The Ember Lounge</strong>
+                <p>123 Main Street<br>
+                Downtown District<br>
+                Los Angeles, CA 90012</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="delivery-menu-preview">
+        <h2>Popular Delivery Items</h2>
+        <div class="delivery-items-grid">
+            <div class="delivery-card">
+                <div class="delivery-img-placeholder">🍔</div>
+                <h4>Ember Burger</h4>
+                <p class="delivery-price">$24</p>
+                <button class="btn-add-small" onclick="window.location.href='takeout.html'">+ Add</button>
+            </div>
+            <div class="delivery-card">
+                <div class="delivery-img-placeholder">🍤</div>
+                <h4>Garlic Shrimp</h4>
+                <p class="delivery-price">$12</p>
+                <button class="btn-add-small" onclick="window.location.href='takeout.html'">+ Add</button>
+            </div>
+            <div class="delivery-card">
+                <div class="delivery-img-placeholder">🥗</div>
+                <h4>Caesar Salad</h4>
+                <p class="delivery-price">$14</p>
+                <button class="btn-add-small" onclick="window.location.href='takeout.html'">+ Add</button>
+            </div>
+            <div class="delivery-card">
+                <div class="delivery-img-placeholder">🍰</div>
+                <h4>Lava Cake</h4>
+                <p class="delivery-price">$12</p>
+                <button class="btn-add-small" onclick="window.location.href='takeout.html'">+ Add</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>The Ember Lounge</h4>
+                <p>Sophisticated dining with warmth and authenticity. Where every meal becomes a memory.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Dine</h5>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="wine.html">Wine List</a></li>
+                    <li><a href="reservation.html">Reservations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Order</h5>
+                <ul>
+                    <li><a href="takeout.html">Takeout</a></li>
+                    <li><a href="delivery.html">Delivery</a></li>
+                    <li><a href="giftcards.html">Gift Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="mailto:info@emberlounge.com">info@emberlounge.com</a></li>
+                    <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Ember Lounge • All Rights Reserved</p>
+        </div>
+    </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="res.js"></script>
+<script>
+    // Initialize map
+    document.addEventListener('DOMContentLoaded', function() {
+        const map = L.map('deliveryMap').setView([34.0522, -118.2437], 13);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        
+        // Restaurant location (fake pin - Downtown LA)
+        const restaurantLat = 34.0522;
+        const restaurantLng = -118.2437;
+        
+        // Custom icon for restaurant
+        const restaurantIcon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div class="marker-pin">🔥</div>',
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        });
+        
+        L.marker([restaurantLat, restaurantLng], {icon: restaurantIcon})
+            .addTo(map)
+            .bindPopup('<b>The Ember Lounge</b><br>123 Main Street');
+        
+        // Delivery zone circle (5 mile radius ≈ 8047 meters)
+        L.circle([restaurantLat, restaurantLng], {
+            color: '#ff5a3c',
+            fillColor: '#ff5a3c',
+            fillOpacity: 0.1,
+            radius: 8047
+        }).addTo(map);
+    });
+</script>
+</body>
+</html>

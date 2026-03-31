@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeout - The Ember Lounge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">The Ember Lounge</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">View Menu</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="takeout.html">Takeout</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="wine.html">Wine List</a></li>
+            <li><a href="giftcards.html">Gift Cards</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="page-title">ORDER TAKEOUT</h1>
+    <p class="center-text">Call us at <strong>(555) 123-4567</strong> or order online below</p>
+    
+    <div class="cart-summary" id="cartSummary">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <span class="cart-count" id="cartCount">0 items</span>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total">
+            <strong>Total: $<span id="cartTotal">0.00</span></strong>
+        </div>
+        <button class="btn-checkout" onclick="checkout()">PROCEED TO CHECKOUT</button>
+    </div>
+
+    <section class="menu-section">
+        <h2 class="menu-category">Starters</h2>
+        
+        <div class="menu-item takeout-item">
+            <div class="item-info">
+                <h3>Garlic Butter Shrimp</h3>
+                <p>Grilled prawns tossed in garlic and herbs.</p>
+                <span class="price">$12</span>
+            </div>
+            <button class="btn-add" onclick="addToCart('Garlic Butter Shrimp', 12)">
+                <span class="plus">+</span> ADD
+            </button>
+        </div>
+
+        <div class="menu-item takeout-item">
+            <div class="item-info">
+                <h3>Veggie Spring Rolls</h3>
+                <p>Crispy rolls served with sweet chili dip.</p>
+                <span class="price">$8</span>
+            </div>
+            <button class="btn-add" onclick="addToCart('Veggie Spring Rolls', 8)">
+                <span class="plus">+</span> ADD
+            </button>
+        </div>
+
+        <div class="menu-item takeout-item">
+            <div class="item-info">
+                <h3>Truffle Fries</h3>
+                <p>Hand-cut fries with truffle oil and parmesan.</p>
+                <span class="price">$10</span>
+            </div>
+            <button class="btn-add" onclick="addToCart('Truffle Fries', 10)">
+                <span class="plus">+</span> ADD
+            </button>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <h2 class="menu-category">Mains</h2>
+        
+        <div class="menu-item takeout-item">
+            <div class="item-info">
+                <h3>Ember Burger</h3>
+                <p>Wagyu beef, aged cheddar, caramelized onions.</p>
+                <span class="price">$24</span>
+            </div>
+            <button class="btn-add" onclick="addToCart('Ember Burger', 24)">
+                <span class="plus">+</span> ADD
+            </button>
+        </div>
+
+        <div class="menu-item takeout-item">
+            <div class="item-info">
+                <h3>Pan-Seared Salmon</h3>
+                <p>With lemon butter sauce and seasonal vegetables.</p>
+                <span class="price">$28</span>
+            </div>
+            <button class="btn-add" onclick="addToCart('Pan-Seared Salmon', 28)">
+                <span class="plus">+</span> ADD
+            </button>
+        </div>
+
+        <div class="menu-item takeout-item">
+            <div class="item-info">
+                <h3>Mushroom Risotto</h3>
+                <p>Arborio rice, wild mushrooms, truffle oil.</p>
+                <span class="price">$22</span>
+            </div>
+            <button class="btn-add" onclick="addToCart('Mushroom Risotto', 22)">
+                <span class="plus">+</span> ADD
+            </button>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <h2 class="menu-category">Desserts</h2>
+        
+        <div class="menu-item takeout-item">
+            <div class="item-info">
+                <h3>Chocolate Lava Cake</h3>
+                <p>Warm center with vanilla ice cream.</p>
+                <span class="price">$12</span>
+            </div>
+            <button class="btn-add" onclick="addToCart('Chocolate Lava Cake', 12)">
+                <span class="plus">+</span> ADD
+            </button>
+        </div>
+    </section>
+</main>
+
+<footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>The Ember Lounge</h4>
+                <p>Sophisticated dining with warmth and authenticity. Where every meal becomes a memory.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Dine</h5>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="wine.html">Wine List</a></li>
+                    <li><a href="reservation.html">Reservations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Order</h5>
+                <ul>
+                    <li><a href="takeout.html">Takeout</a></li>
+                    <li><a href="delivery.html">Delivery</a></li>
+                    <li><a href="giftcards.html">Gift Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="mailto:info@emberlounge.com">info@emberlounge.com</a></li>
+                    <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Ember Lounge • All Rights Reserved</p>
+        </div>
+    </footer>
+
+<script src="res.js"></script>
+</body>
+</html>
