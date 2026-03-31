@@ -2,23 +2,6 @@ The Ember Lounge - Restaurant Website
 
 A modern, responsive restaurant website featuring online reservations, takeout ordering, delivery tracking, wine list, and digital gift cards.
 
-PROJECT STRUCTURE
-The-Ember-Lounge/
-├── index.html          # Homepage with image slider and restaurant info
-├── menu.html           # Food menu display
-├── reservation.html    # Table reservation system with modal confirmation
-├── takeout.html        # Online ordering with shopping cart
-├── delivery.html       # Delivery info with interactive map
-├── wine.html           # Wine list and cocktails
-├── giftcards.html      # Digital & physical gift card purchase
-├── style.css           # All styles and responsive design
-├── res.js              # JavaScript functionality
-└── images/             # Restaurant photos
-    ├── barres.jpg
-    ├── picres.avif
-    ├── res.avif
-    └── res1.png
-
  | Page             | Features                                                            |
 | ---------------- | ------------------------------------------------------------------- |
 | **Home**         | Auto-scrolling image slider, business hours, parking info           |
