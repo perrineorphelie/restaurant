@@ -14,7 +14,7 @@ A modern, responsive restaurant website featuring online reservations, takeout o
 | **Gift Cards**   | Amount selection, delivery method (email/physical), 3D card preview |
 
 
-   kEY FUNCTIONALITIES
+   KEY FUNCTIONALITIES
 Shopping Cart - Add/remove items, quantity controls, real-time total
 
 Reservation System - Form validation with animated confirmation modal
